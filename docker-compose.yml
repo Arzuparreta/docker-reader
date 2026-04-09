@@ -1,0 +1,15 @@
+services:
+  docker-reader:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: docker-reader:latest
+    user: "${UID:-1000}:${GID:-1000}"
+    ports:
+      - "3433:3433"
+    environment:
+      DATA_DIR: /data
+      CONFIG: /data/config.json
+    volumes:
+      - ./data:/data
+    restart: unless-stopped

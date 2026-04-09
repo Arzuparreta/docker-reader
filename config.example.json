@@ -1,0 +1,15 @@
+{
+  "addr": ":8080",
+  "sessionSecret": "change-this-secret",
+  "sessionCookieName": "docker_reader_session",
+  "users": [
+    {
+      "username": "arsu",
+      "password": "change-this-password"
+    },
+    {
+      "username": "dad",
+      "password": "change-this-password"
+    }
+  ]
+}
